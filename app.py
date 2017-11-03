@@ -1,11 +1,3 @@
-#######
-# Author: James Poole
-# Date: 23 April 2016
-# jgaple@gmail.com
-#
-# app.py
-#######
-
 from flask import Flask, render_template, request, redirect, url_for, make_response
 import motors
 import RPi.GPIO as GPIO
