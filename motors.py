@@ -40,14 +40,14 @@ def turnLeft():
 	GPIO.output(Motor1A,GPIO.HIGH)
 	GPIO.output(Motor1B,GPIO.LOW)
 	GPIO.output(Motor2A,GPIO.LOW)
-	GPIO.output(Motor2B,GPIO.LOW)
+	GPIO.output(Motor2B,GPIO.HIGH)
 
 	sleep(0.3)
 
 def turnRight():
 	print("Going Right")
 	GPIO.output(Motor1A,GPIO.LOW)
-	GPIO.output(Motor1B,GPIO.LOW)
+	GPIO.output(Motor1B,GPIO.HIGH)
 	GPIO.output(Motor2A,GPIO.HIGH)
 	GPIO.output(Motor2B,GPIO.LOW)
 
