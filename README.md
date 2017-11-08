@@ -25,7 +25,7 @@ Wikipedia:
 
 ## Schematics
 
-![](https://user-images.githubusercontent.com/22028245/32569745-460f383e-c4c2-11e7-9cc8-a9fefac19460.png)
+![](https://user-images.githubusercontent.com/22028245/32573479-676c380e-c4ce-11e7-89a9-b013da8bbf91.jpg)
 
 Once you've put everything together, your "robot" will look more or less like this:
 
