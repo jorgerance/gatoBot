@@ -40,9 +40,7 @@ You may find that the motors are not moving in the direction you expected. If th
 	        GPIO.output(Motor1B,GPIO.LOW)
 	        GPIO.output(Motor2A,GPIO.HIGH)
 	        GPIO.output(Motor2B,GPIO.LOW)
-	
-	        sleep(0.3)
-	
+	        sleep(0.2)
 	
 	
 	def forward():
@@ -50,8 +48,7 @@ You may find that the motors are not moving in the direction you expected. If th
 	        GPIO.output(Motor1B,GPIO.HIGH)
 	        GPIO.output(Motor2A,GPIO.LOW)
 	        GPIO.output(Motor2B,GPIO.HIGH)
-	
-	        sleep(0.3)
+	        sleep(0.2)
 	
 	def turnLeft():
 	        print("Going Left")
@@ -59,8 +56,7 @@ You may find that the motors are not moving in the direction you expected. If th
 	        GPIO.output(Motor1B,GPIO.LOW)
 	        GPIO.output(Motor2A,GPIO.LOW)
 	        GPIO.output(Motor2B,GPIO.HIGH)
-	
-	        sleep(0.3)
+	        sleep(0.2)
 	
 	def turnRight():
 	        print("Going Right")
@@ -68,8 +64,7 @@ You may find that the motors are not moving in the direction you expected. If th
 	        GPIO.output(Motor1B,GPIO.HIGH)
 	        GPIO.output(Motor2A,GPIO.HIGH)
 	        GPIO.output(Motor2B,GPIO.LOW)
-	
-	        sleep(0.3)
+	        sleep(0.2)
 
 
 ## Web interface

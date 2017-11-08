@@ -34,7 +34,6 @@ def reroute(changepin):
 	else:
 		motors.stop()
 
-
 	response = make_response(redirect(url_for('index')))
 	return(response)
 

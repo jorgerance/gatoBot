@@ -9,31 +9,26 @@ Motor1B = 18
 Motor2A = 11
 Motor2B = 15
 
+sleep_t = 0.2
 
-#Set up all as outputs
 GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
 GPIO.setup(Motor2A,GPIO.OUT)
 GPIO.setup(Motor2B,GPIO.OUT)
-
 
 def backward():
 	GPIO.output(Motor1A,GPIO.HIGH)
 	GPIO.output(Motor1B,GPIO.LOW)
 	GPIO.output(Motor2A,GPIO.HIGH)
 	GPIO.output(Motor2B,GPIO.LOW)
-
-	sleep(0.3)
-
-
+	sleep(sleep_t)
 
 def forward():
 	GPIO.output(Motor1A,GPIO.LOW)
 	GPIO.output(Motor1B,GPIO.HIGH)
 	GPIO.output(Motor2A,GPIO.LOW)
 	GPIO.output(Motor2B,GPIO.HIGH)
-
-	sleep(0.3)
+	sleep(sleep_t)
 
 def turnLeft():
 	print("Going Left")
@@ -41,8 +36,7 @@ def turnLeft():
 	GPIO.output(Motor1B,GPIO.LOW)
 	GPIO.output(Motor2A,GPIO.LOW)
 	GPIO.output(Motor2B,GPIO.HIGH)
-
-	sleep(0.3)
+	sleep(sleep_t)
 
 def turnRight():
 	print("Going Right")
@@ -50,8 +44,7 @@ def turnRight():
 	GPIO.output(Motor1B,GPIO.HIGH)
 	GPIO.output(Motor2A,GPIO.HIGH)
 	GPIO.output(Motor2B,GPIO.LOW)
-
-	sleep(0.3)
+	sleep(sleep_t)
 
 def stop():
 	print("Stopping")
