@@ -9,9 +9,9 @@ s.connect(("8.8.8.8", 80))
 server_ip = s.getsockname()[0]
 s.close()
 
-GPIO.setmode(GPIO.BOARD) #set up GPIO
+GPIO.setmode(GPIO.BOARD) 
 
-app = Flask(__name__) #set up flask server
+app = Flask(__name__) 
 
 @app.route('/')
 def index():
@@ -21,7 +21,7 @@ def index():
 @app.route('/<changepin>', methods=['POST'])
 def reroute(changepin):
 
-	changePin = int(changepin) #cast changepin to an int
+	changePin = int(changepin) 
 
 	if changePin == 1:
 		motors.turnLeft()
@@ -37,4 +37,4 @@ def reroute(changepin):
 	response = make_response(redirect(url_for('index')))
 	return(response)
 
-app.run(debug=True, host='0.0.0.0', port=8000) #set up the server in debug mode to the port 8000
+app.run(debug=True, host='0.0.0.0', port=8000) 
