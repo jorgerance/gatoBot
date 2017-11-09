@@ -1,6 +1,8 @@
 # gatoBot
 
-A web controlled Raspberry Pi Zero W robot with live video streaming.
+A web controlled **Raspberry Pi Zero W** robot with live video streaming.
+
+This is something I built in order to bother my cats.
 
 ## About Raspberry Pi
 Wikipedia:
@@ -33,22 +35,19 @@ Once you've put everything together, your "robot" will look more or less like th
 
 ## DC motors direction issues
 
-You may find that the motors are not moving in the direction you expected. If this happens, review the following line in motors.py and play with the LOW and HIGH parameters ;)
+You may find that the motors are not moving in the direction you expected. If this happens, review the following line in **motors.py** and play with the LOW and HIGH parameters ;)
 
 	def backward():
 	        GPIO.output(Motor1A,GPIO.HIGH)
 	        GPIO.output(Motor1B,GPIO.LOW)
 	        GPIO.output(Motor2A,GPIO.HIGH)
 	        GPIO.output(Motor2B,GPIO.LOW)
-	        sleep(0.2)
-	
 	
 	def forward():
 	        GPIO.output(Motor1A,GPIO.LOW)
 	        GPIO.output(Motor1B,GPIO.HIGH)
 	        GPIO.output(Motor2A,GPIO.LOW)
 	        GPIO.output(Motor2B,GPIO.HIGH)
-	        sleep(0.2)
 	
 	def turnLeft():
 	        print("Going Left")
@@ -56,7 +55,6 @@ You may find that the motors are not moving in the direction you expected. If th
 	        GPIO.output(Motor1B,GPIO.LOW)
 	        GPIO.output(Motor2A,GPIO.LOW)
 	        GPIO.output(Motor2B,GPIO.HIGH)
-	        sleep(0.2)
 	
 	def turnRight():
 	        print("Going Right")
@@ -64,11 +62,10 @@ You may find that the motors are not moving in the direction you expected. If th
 	        GPIO.output(Motor1B,GPIO.HIGH)
 	        GPIO.output(Motor2A,GPIO.HIGH)
 	        GPIO.output(Motor2B,GPIO.LOW)
-	        sleep(0.2)
 
 
 ## Web interface
 
-Once the Raspberry Pi is up and running, connected to a wifi network and the L298N driver is powered by 4AA batteries, you should be able to control your robot by accessing http://raspberry_ip:8000/
+Once the Raspberry Pi is up and running, connected to a wifi network and the L298N driver is powered by 4AA batteries, you should be able to control your robot by accessing **http://raspberry_ip:8000/**
 
 ![](https://user-images.githubusercontent.com/22028245/32572842-356be6bc-c4cc-11e7-9793-c094f5052fff.jpg)
