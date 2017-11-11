@@ -32,8 +32,6 @@ def reroute(changepin):
 		motors.turnRight()
 	elif changePin == 4:
 		motors.backward()
-	elif changePin == 6:
-		motors.objectavoidance()
 	elif changePin == 5:
 		motors.stop()
 	else:
