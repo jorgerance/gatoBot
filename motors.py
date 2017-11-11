@@ -5,16 +5,20 @@ GPIO.setmode(GPIO.BOARD)
 
 Motor1A = 16 
 Motor1B = 18
-
 Motor2A = 11
 Motor2B = 15
 
 sleep_t = 0.2
 
+sr04_trig = 36
+sr04_echo = 35
+
 GPIO.setup(Motor1A,GPIO.OUT)
 GPIO.setup(Motor1B,GPIO.OUT)
 GPIO.setup(Motor2A,GPIO.OUT)
 GPIO.setup(Motor2B,GPIO.OUT)
+GPIO.setup(sr04_trig,GPIO.OUT)
+GPIO.setup(sr04_echo,GPIO.IN)
 
 def backward():
 	GPIO.output(Motor1A,GPIO.HIGH)
