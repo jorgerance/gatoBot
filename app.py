@@ -1,15 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for, make_response
-import motors
 import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BOARD)
+import motors
 import socket
+
+motors.stop()
 
 # Get server ip
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 server_ip = s.getsockname()[0]
 s.close()
-
-GPIO.setmode(GPIO.BOARD) 
 
 app = Flask(__name__) 
 
@@ -31,10 +32,12 @@ def reroute(changepin):
 		motors.turnRight()
 	elif changePin == 4:
 		motors.backward()
-	elif changepin == 6:
+	elif changePin == 6:
 		motors.objectavoidance()
-	else:
+	elif changePin == 5:
 		motors.stop()
+	else:
+		print("Wrong command")
 
 	response = make_response(redirect(url_for('index')))
 	return(response)
